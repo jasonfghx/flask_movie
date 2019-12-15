@@ -1,0 +1,27 @@
+<html>
+<head>
+    <meta charset="UTF-8">
+    <title>Flask-WTForm測試</title>
+    <style type="text/css">
+        .textField {
+            font-size: 16px;
+            font-family: 微軟正黑體, monospace;
+            color: #cc6e96;
+            background-color: #fcf8db
+        }
+    </style>
+</head>
+<body>
+    <h1>WTForm展示</h1>
+    <form method="POST">
+        {{ runForm.csrf_token }}
+        {{ runForm.name.label }} {{ runForm.name(class="textField") }}
+        {{ runForm.submit }}
+         ＜!-- runForm由login()副程式參數傳遞過來並綁定於當前Form表單，用來
+                               渲染出表單所需的各式元素，如文字輸入欄位、選單或submit確認鈕。
+                               表單中也為避免CSRF跨網站請求偽造，因此構建了runForm.csrf_token
+              隱藏欄位，
+         --＞
+    </form>
+</body>
+</html>

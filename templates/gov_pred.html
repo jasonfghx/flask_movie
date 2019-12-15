@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Input Page</title>
+</head>
+<body>
+    <form method='post' action="{{ url_for('pred_content') }}
+    ">
+    	<p style="text-align:center; padding:0px 280px 0px 0px">指令</p>
+        <p align="center"><input type='text' style='width:300px; height:20px;' name='subject', value="{{ subject }}"/>
+    </p>
+    	<!-- <p style="text-align:center; padding:0px 280px 0px 0px">內容</p>
+        <p align="center">
+        <textarea rows="5" cols="50" style='width:300px; height:200px;' name="content">{{ content }}</textarea> -->
+    </p>
+    	<p style="text-align:center; padding:0px 280px 0px 0px">備注</p>
+    	<p align="center"><input type='text' style='width:300px; height:20px;' name='predict' value="{{ predict }}" readonly="readonly"/>
+    </p>
+        <p align="center">
+        <button type='submit' style='width:80px; height:30px;'>送出</button>
+    </p>
+    </form>
+    <form method='post' action="{{ url_for('index') }}">
+        <p align="center">
+        <button type='submit' style='width:80px; height:30px;'>清空</button>
+    </p>
+    </form>
+</body>
+</html>
